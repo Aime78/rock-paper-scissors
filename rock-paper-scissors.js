@@ -37,7 +37,7 @@ function computerPlayer() {
 function playerSelection() {
 
     // Get player's choice
-    let userChoice = window.prompt("Your choice?: ");
+    let userChoice = window.prompt("Choose among rock, paper, or scissor?: ");
     return userChoice;
 }
 
@@ -105,4 +105,38 @@ function playRound () {
     }
 }
 
-console.log(playRound())
+// Game program
+
+function game() {
+    // initiate scores
+    let playerScore = 0;
+    let computerScore = 0;
+    // Play game for five rounds
+    for (let i = 0; i < 5; i++) {
+        let roundWinner = playRound();
+        // When the player wins the round increase its score
+        if (roundWinner === 'player won') {
+            playerScore++;
+        }
+        // When the computer wins the round increase its score
+        else if (roundWinner === 'computer won') {
+            computerScore++;
+        }
+    }
+
+    // Compare the player's score against the computer's score
+    if (playerScore > computerScore) {
+        let winner = 'player';
+        return winner;
+    }
+    else if (computerScore > playerScore) {
+        let winner = 'computer';
+        return winner
+    }
+    else {
+        let winner = 'tie';
+        return winner;
+    }
+}
+
+console.log(`the winner of the game is ${game()} !!!`);
