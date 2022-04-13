@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <script src="rock-paper-scissors.js"></script> -->
-    <link href="style.css" rel="stylesheet">
+    <link href="stylesheet/style.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="images/content-cut.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Rubik+Microbe&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+    <script src="javascript/rock-paper-scissors.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
@@ -24,21 +26,21 @@
         <p class="paragraph">First to score 5 points wins the game</p>
         <div class="container">
             <div class="player-report">
-                <div class="player-choice"></div>
-                <span>Player: 0</span>
+                <div></div>
+                <span class="player">Player: 0</span>
             </div>
             <div class="computer-report">
-                <div class="computer-choice"></div>
-                <span>Computer: 0</span>
+                <div></div>
+                <span class="computer">Computer: 0</span>
             </div>
         </div>
     </div>
 
     <!--User choice's board-->
     <div class="user-choice container">
-        <div class="first choices"></div>
-        <div class="second choices"></div>
-        <div class="third choices"></div>
+        <button id="rock" class="first choices choice"></button>
+        <button id="scissor" class="second choices choice"></button>
+        <button id="paper" class="third choices choice"></button>
     </div>
 
     <!--Footer-->
@@ -52,5 +54,9 @@
             </svg>
         </a>
     </div>
+    <div class="box">
+        <p class="box-title"></p>
+        <button class="btn btn-restart">Restart</button>
+      </div>
 </body>
 </html>
